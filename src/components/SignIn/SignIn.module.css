@@ -1,0 +1,270 @@
+.signInSection {
+    @media(min-width:1280px){
+        height: 100vh;
+    }
+}
+
+.signInPosition{
+    @media(min-width:1280px){
+     display: flex;
+     justify-content: center;
+    position: relative;
+    top: 180px;   
+    }
+}
+
+.sectionImageSignIn{
+    @media(min-width:1280px){
+      z-index: 1;
+    }
+}
+
+.signInImageContainer {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.signInImage {
+    padding-top: 87px;
+    @media(min-width:768px){
+        width:409px;
+        height:359px;
+    }
+    @media(min-width:1280px){
+        width: 532px;
+        height: 468px;
+        padding-top: 0px;
+    }
+}
+
+.signInSectionBackground {
+    background-color: #1E1F28;
+    width: 100vw;
+    height: 100vh;
+    @media(min-width:1280px) {
+        background-color: transparent;
+        width: 500px;
+        height: 560.8px;
+        padding-left: 80px;
+        z-index: 1;
+    }
+}
+
+.signInContainerBackground {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media(min-width:1280px){
+        display: block;
+    }
+}
+
+.containerFormSignIn {
+    width: 335px;
+    height: 315px;
+    border-radius: 30px;
+    background-color: #2A2C36;
+    box-shadow: 0px 4px 48px 0px rgba(0, 0, 0, 0.10);
+    position: relative;
+    bottom: 33px;
+    @media(min-width:768px){
+        width: 500px;
+        height: 419px;
+        bottom: 15px;
+    }
+}
+
+.containerFormSignIn div {
+     @media(min-width:1280px){
+        display: block;
+    }
+}
+
+/*.containerForm div:not(:first-child) {
+    display: inline-flex;
+    flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+}*/
+
+.signInTitle {
+    color: #FAFAFA;
+    font-feature-settings: 'liga' off;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+margin-top: 0;
+margin-bottom: 25px;
+margin-left: 28px;
+padding-top: 32px;
+@media(min-width:768px){
+    font-size: 28px;
+    margin-left: 50px;
+    margin-bottom: 32px;
+}
+}
+
+label {
+    margin-left: 28px;
+    @media(min-width:768px){
+        margin-left: 50px;
+    }
+}
+
+.signInLabel {
+    position: relative;
+}
+
+.signInInput {
+    width: 239px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 40px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: solid 1px #FAFAFA;
+    margin-bottom: 12px;
+    color: #FAFAFA;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    @media(min-width:768px){
+        width: 350px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 50px;
+        margin-bottom: 24px;
+        font-size: 18px;
+    }
+}
+
+input::placeholder{
+    color:#FAFAFA;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+    @media(min-width:768px){
+        input::placeholder {
+        font-size: 18px;
+    }
+}
+
+
+
+.signInIcons {
+    position: absolute;
+    bottom: 70%;
+    left: 14px;
+    @media(min-width:768px){
+        left: 18px;
+    }
+}
+
+.signInPassword {
+    position: absolute;
+    bottom: 46%;
+    left: 42px;
+    @media(min-width:768px){
+        bottom: 47%;
+        left: 65px;
+    }
+    @media(min-width:1280px){
+        bottom: 48%;
+    }
+}
+
+.buttonSignIn {
+    width: 282px;
+    height: 45px;
+    border-radius: 6px;
+    margin-left: 28px;
+    margin-top: 16px;
+    padding: 0;
+    background-color: #8BAA36;
+    border: solid 1px #8BAA36;
+    color: #FAFAFA;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+@media(min-width:768px){
+    width: 400px;
+    height: 56px;
+    margin-left: 50px;
+    margin-top: 26px;
+
+}
+}
+
+.signInIcon {
+    width: 18px;
+    height: 18px;
+    stroke: #FAFAFA;
+    fill: #2A2C36;
+    position: relative;
+    top:20px;
+    @media(min-width:768px){
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.registerIconLock {
+    width: 18px;
+    height: 18px;
+    stroke: #FAFAFA;
+    fill: #2A2C36;
+    position: relative;
+    top:140px;
+    left: 27px;
+    @media(min-width:768px){
+        width: 24px;
+        height: 24px;
+        top: 180px;
+        left: 47px;
+    }
+}
+
+.registrationLink {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 118px;
+    width: 335px;
+    @media(min-width:768px){
+        padding-bottom: 59px;
+    }
+    @media(min-width:1280px){
+        padding-left: 83px;
+    }
+}
+
+.registrationLink a {
+    color: #FAFAFA;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+text-align: center;
+@media(min-width:768px){
+    font-size: 16px;
+    }
+}
+
+.backgroundLaptopSignIn{
+    @media(min-width:1280px){
+   background-color: #1E1F28;
+    width:100%;
+    height: 30%;
+    display: flex;
+    background-position: bottom;
+    }
+}
