@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React from 'react'
 import './App.css';
 import Start from './components/start/Start';
 import Registration from './components/Registration/Registration';
