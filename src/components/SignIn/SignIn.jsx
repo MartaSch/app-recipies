@@ -47,7 +47,7 @@ const SignIn = () => {
                 </form>
             </div>
              <div className={css.registrationLink}>
-                <a href="/So-Yummy-app/registration">Registration</a>
+                <a href="/yummy-app/registration">Registration</a>
             </div>
             </div>
             </div>
