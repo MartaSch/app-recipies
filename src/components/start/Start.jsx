@@ -6,11 +6,11 @@ const Start = () => {
     const navigate = useNavigate();
 
     const handleRegistrationClick = () => {
-        navigate('/So-Yummy-app/registration');
+        navigate("/yummy-app/registration");
     };
 
     const handleSignInClick = () => {
-        navigate('/So-Yummy-app/signin')
+        navigate("/yummy-app/signin")
     }
     return (
         <div className={css.startContainer}>
