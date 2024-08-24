@@ -8,9 +8,9 @@ export const App = () => {
   return (
     <>
     <Routes>
-      <Route path="/So-Yummy-app/" element={<Start />} />
-      <Route path="/So-Yummy-app/registration" element={<Registration />} />
-      <Route path="/So-Yummy-app/signin" element={<SignIn />} />
+      <Route path="/yummy-app/" element={<Start />} />
+      <Route path="/yummy-app/registration" element={<Registration />} />
+      <Route path="/yummy-app/signin" element={<SignIn />} />
     </Routes> 
      </>
   )
