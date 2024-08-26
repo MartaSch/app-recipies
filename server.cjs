@@ -3,8 +3,6 @@ const express = require('express');
 
 const app = express();
 
-const __dirname = path.dirname(__filename);
-
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('*', (req, res) => {
