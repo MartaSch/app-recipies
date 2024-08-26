@@ -9,7 +9,7 @@
   "scripts": {
     "build": "vite build",
     "serve": "vite",
-    "start": "node server.cjs",
+    "start": "node server.js",
     "dev": "vite"
   },
   "dependencies": {
