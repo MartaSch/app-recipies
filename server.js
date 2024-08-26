@@ -3,6 +3,7 @@ import path from 'path';
 import mime from 'mime';
 
 const app = express();
+const __dirname = path.resolve();
 
 const setMimeTypes = (req, res, next) => {
   const mimeType = mime.getType(req.url);
