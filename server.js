@@ -1,6 +1,6 @@
-const path = require('path');
-const express = require('express');
-const mime = require('mime');
+import express from 'express';
+import path from 'path';
+import mime from 'mime';
 
 const app = express();
 
