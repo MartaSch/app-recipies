@@ -8,7 +8,7 @@ import { App }   from "./index";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/yummy-app">
     <App />
     </BrowserRouter>
   </StrictMode>
