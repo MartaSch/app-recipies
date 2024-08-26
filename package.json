@@ -8,7 +8,7 @@
   "scripts": {
   "build": "vite build",
   "serve": "vite",
-  "start": "serve -s dist"
+  "start": "node server.cjs"
 },
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.25.4",
