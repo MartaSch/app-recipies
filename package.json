@@ -6,11 +6,11 @@
     "node": "20.x"
   },
   "scripts": {
-  "build": "vite build",
-  "serve": "vite",
-  "start": "node server.cjs",
-  "dev": "vite"
-},
+    "build": "vite build",
+    "serve": "vite",
+    "start": "node server.cjs",
+    "dev": "vite"
+  },
   "dependencies": {
     "@babel/plugin-transform-class-properties": "^7.25.4",
     "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.7",
@@ -20,6 +20,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "express": "^4.19.2",
     "glob": "^11.0.0",
+    "mime": "^4.0.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.1.2",
