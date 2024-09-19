@@ -1,10 +1,24 @@
 import React, {useState} from "react";
 import css from '../SignIn/SignIn.module.css';
 import Svg from '../../assets/svg/svg';
+import { useDispatch } from "react-redux";
 
 const SignIn = () => {
     const [signinEmailPlaceholder, setSigninEmailPlaceholder] = useState('Name');
     const [signinPasswordPlaceholder, setSigninPasswordPlaceholder] = useState('Password');
+
+    const dispatch = useDispatch();
+
+    const handleSubmit = e => {
+        const form = e.currentTarget;
+        dispatch(
+            logIn({
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+            })
+        );
+        form.reset();
+    };
 
     return (
         <>
@@ -19,7 +33,7 @@ const SignIn = () => {
                 <div className={css.signInSectionBackground}>
                     <div className={css.signInContainerBackground}>
                 <div className={css.containerFormSignIn}>
-                <form className={css.signInForm}>
+                <form className={css.signInForm} onSubmit={handleSubmit}>
                 <h5 className={css.signInTitle}>Sign In</h5>
             <label className={css.signInLabel}>
                 <input className={css.signInInput} 

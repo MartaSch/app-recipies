@@ -1,9 +1,12 @@
 import express from 'express';
 import path from 'path';
 import mime from 'mime';
+import connectDB from './db';
 
 const app = express();
 const __dirname = path.resolve();
+
+require('dotenv').config();
 
 const setMimeTypes = (req, res, next) => {
   const mimeType = mime.getType(req.url);

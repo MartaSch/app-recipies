@@ -1,17 +1,51 @@
-import React from 'react'
-import './index.css';
-import Start from './components/start/Start';
-import Registration from './components/Registration/Registration';
-import SignIn from './components/SignIn/SignIn';
+import React from 'react';
+import { useEffect, lazy, Suspense } from 'react';
+import { useDispatch } from 'react-redux';
+import { PrivateRoute } from './components/PrivateRoute';
+import { RestrictedRoute } from './components/RestrictedRoute';
+import { refreshUser } from './redux/auth/operations';
+import { useAuth } from './hooks/useAuth';
 import { Route, Routes } from 'react-router-dom';
+import './index.css';
+
+const HomePage = lazy(() => import('./pages/Home'));
+const RegisterPage = lazy(() => import('./pages/Register'));
+const LoginPage = lazy(() => import('./pages/Login'));
+const CategoriesPage = lazy(() => import('./pages/Category'));
+
 export const App = () => {
-  return (
-    <>
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
+
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
+    <Suspense fallback={<div>Loading...</div>}>
     <Routes>
-      <Route path="/yummy-app/" element={<Start />} />
-      <Route path="/yummy-app/registration" element={<Registration />} />
-      <Route path="/yummy-app/signin" element={<SignIn />} />
+      <Route path="/yummy-app/" element={<HomePage />} />
+      <Route 
+      path="/yummy-app/registration" 
+      element={
+        <RestrictedRoute redirectTo="/yummy-app/categories" component={<RegisterPage />} />
+      } 
+      />
+      <Route 
+      path="/yummy-app/signin" 
+      element={
+      <RestrictedRoute redirectTo="/yummy-app/categories" component={<LoginPage />} />
+    } 
+    />
+    <Route 
+    path="/yummy-app/categories"
+    element={
+      <PrivateRoute redirectTo="/yummy-app/signin" component={<CategoriesPage />} />
+    }
+    />
     </Routes> 
-     </>
-  )
-}
+    </Suspense>
+  );
+};

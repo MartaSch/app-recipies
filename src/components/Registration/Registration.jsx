@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import css from '../Registration/Registration.module.css';
 import Svg from '../../assets/svg/svg';
+import { register } from "../../redux/auth/operations";
 
 const Registration = () => {
 
@@ -8,6 +10,19 @@ const Registration = () => {
     const [emailPlaceholder, setEmailPlaceholder] = useState('Email');
     const [passwordPlaceholder, setPasswordPlaceholder] = useState('Password');
 
+    const dispatch = useDispatch();
+    const handleSubmit = e => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        dispatch(
+            register({
+                name: form.elements.name.value,
+                email: form.elements.email.value,
+                password: form.elements.password.value,
+            })
+        );
+        form.reset();
+    }
 
     return (
         <>
@@ -22,7 +37,7 @@ const Registration = () => {
                 <div className={css.registrationSectionBackground}>
                     <div className={css.registrationContainerBackground}>
                 <div className={css.containerForm}>
-                <form className={css.registerForm}>
+                <form className={css.registerForm} onSubmit={handleSubmit}>
                 <h5 className={css.registrationTitle}>Registration</h5>
             <label className={css.registerLabel}>
                 <input className={css.registerInput} 

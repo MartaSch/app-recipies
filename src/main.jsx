@@ -5,11 +5,18 @@ import '../src/assets/fonts/fonts.css';
 import { StrictMode } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { App }   from "./index";
+import { Provider } from 'react-redux';
+import { persistor, store } from './redux/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <BrowserRouter>
+  <React.StrictMode>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+      <BrowserRouter>
     <App />
-    </BrowserRouter>
-  </StrictMode>
+    </BrowserRouter>  
+      </PersistGate>
+    </Provider>
+  </React.StrictMode>
 );
